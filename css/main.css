@@ -1,0 +1,92 @@
+/*Shraddha*/
+
+
+.text{
+    
+    font-size: 15px;
+    text-align: center;
+}
+
+.text_small{
+    
+    font-size: 14px;
+    
+}
+
+.all{
+    padding: 20px;
+    
+}
+
+.my_camp{
+    
+     border-color: #2196F3;
+    border-width: 2px;
+}
+
+.my_date{
+    
+    border-color: #2196F3;
+    border-width: 2px;
+}
+
+.div_box {
+  
+  width: 1200px;
+    height: 600px;
+  border: 5px solid #818380;
+  padding: 20px;
+  margin: 10px;
+}
+
+.blue_line{
+  
+    height:2px;
+    border-width:0;
+    background-color:#2196F3;                
+    }
+
+.line{
+    height:2px;
+    border-width:10;
+    background-color:#f4f4f4;                
+    }
+    
+}
+.my_name{
+    width: 500px;
+}
+
+
+.theme{
+    width: 200px;
+    border-color: #2196F3;
+    border-width: 2px;
+    text-align: left;
+    
+}
+
+/*Kanit*/
+
+.exportcsv {
+    margin-right: .75rem;
+    margin-top: .75rem;
+}
+
+.date1{
+    margin-top: .75rem;
+    margin-left: .75rem;
+}
+
+.para{
+    margin-left: 3rem;
+}
+
+.feed_para{
+    margin-left: .7rem;
+}
+
+.submitbutton{
+    align-items: flex-end;
+    border-radius: 12px;
+}
