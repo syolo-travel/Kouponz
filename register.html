@@ -18,6 +18,7 @@
   <!-- Custom styles for this template-->
   <link href="css/sb-admin-2.min.css" rel="stylesheet">
 
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 
 <body class="bg-gradient-primary">
@@ -54,7 +55,7 @@
                     <input type="password" class="form-control form-control-user" id="exampleRepeatPassword" placeholder="Repeat Password">
                   </div>
                 </div>
-                <a href="user-details.html" class="btn btn-primary btn-user btn-block">
+                <a href="user-details.html"  id="register_account" class="btn btn-primary btn-user btn-block ">
                   Register Account
                 </a>
                 <hr>
@@ -79,6 +80,22 @@
     </div>
 
   </div>
+
+  <script>
+    $("#register_account").click(function () { 
+          console.log('It is working'); 
+            var firstName = $('#exampleFirstName').val();
+            var lastName = $('#exampleLastName').val();  
+            var email = $('#exampleInputEmail').val();  
+            var password = $('#exampleInputPassword').val();  
+
+            // sessionStorage.setItem("test1",);
+            localStorage.setItem('firstName',firstName);
+            localStorage.setItem('lastName',lastName);
+            localStorage.setItem('emailId',email);
+            localStorage.setItem('password',password);
+      }); 
+    </script>
 
   <!-- Bootstrap core JavaScript-->
   <script src="vendor/jquery/jquery.min.js"></script>

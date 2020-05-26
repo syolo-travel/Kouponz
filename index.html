@@ -18,6 +18,9 @@
   <!-- Custom styles for this template-->
   <link href="css/sb-admin-2.min.css" rel="stylesheet">
 
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+
 </head>
 
 <body class="bg-gradient-primary">
@@ -52,7 +55,7 @@
                         <label class="custom-control-label" for="customCheck">Remember Me</label>
                       </div>
                     </div>
-                    <a href="dashboard.html" class="btn btn-primary btn-user btn-block">
+                    <a href="dashboard.html" id="verify_login" class="btn btn-primary btn-user btn-block verify_login">
                       Login
                     </a>
                     <hr>
@@ -81,7 +84,35 @@
     </div>
 
   </div>
+<script>
 
+$("#verify_login").click(function () { 
+      console.log('It is working');  
+       var emailet = $('#exampleInputEmail').val();  
+       var passwordet = $('#exampleInputPassword').val();  
+        $.ajax({  
+            url: 'http://syol.herokuapp.com/user/login',  
+            type: 'POST',  
+            dataType: 'json',
+            data: {
+              email:emailet,
+              password: passwordet, 
+            },  
+            success: function (data, textStatus, xhr) {  
+                console.log('Successfully Registered');
+                console.log(emailet);  
+                console.log(data);
+                var tokendetails = data.token;
+                localStorage.setItem('tokenvalue', tokendetails);
+                
+            }, 
+            
+            error: function (xhr, textStatus, errorThrown) {  
+                console.log('Error in Operation');  
+            }  
+        });  
+    }); 
+</script>
   <!-- Bootstrap core JavaScript-->
   <script src="vendor/jquery/jquery.min.js"></script>
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -92,6 +123,7 @@
   <!-- Custom scripts for all pages-->
   <script src="js/sb-admin-2.min.js"></script>
 
+  
 </body>
 
 </html>
